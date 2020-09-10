@@ -1,10 +1,10 @@
 /* Variables */
 :root {
-	--colors-background-dark:#444;
+	--colors-background-dark:rgb(46, 0, 59);
 	--colors-background-light:#ffff;
 	--colors-text-light:#fff; 
 	--colors-text-highlight:#456ebf;
-	--colors-text-dark:#000; 
+	--colors-text-dark:rgb(229, 230, 196); 
 	--fonts-normal-text:arial,verdana; 
 }
 
@@ -33,11 +33,29 @@ main {
 }
 
 main strong { 
-  display:inline-block;
+  display: flex;
   padding:10px;
   background-color:var(--colors-text-highlight);
   color:var(--colors-text-light);
   border-radius:5px; 
+  justify-content:center;
+  align-items:center;
+}
+
+.content {
+  width: 70vh;
+}
+
+button {
+  margin: 10px;
+  background-color: #456ebf;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-decoration: none;  
+  color: #ffffff;
+  cursor: pointer;
+  font-size: large;
 }
 
 footer { 
@@ -65,7 +83,7 @@ p:last-child {
 
 /* Other elements */
 #website_container { 
-  width:310px;
+  width:751px;
   height:100vh;
   text-align:center;
   margin:0px auto;
@@ -76,7 +94,7 @@ p:last-child {
 }
 #website_container .content { 
   border-radius:15px;
-  background-color:var(--colors-background-light);
+  background-color:var(--colors-background-dark);
   color:var(--colors-text-dark);
   padding:15px;
   overflow:hidden; 

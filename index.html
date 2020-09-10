@@ -10,6 +10,7 @@
   <meta name="keywords" content="pwa,workshop,fontys,smart mobile">
   <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
   <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="images/icons/android-chrome-512x512.png">
 </head>
 
 <body>
@@ -20,6 +21,9 @@
       </header>
       <main>
         <strong>I want to be a PWA when I grow up!</strong>
+        <button class="add-button">Add to home screen</button>
+
+        <button class="vibrate-button">Vibrate</button>
       </main>
       <footer>
         <p><strong>Workshop PWA's - Smart Mobile 2020</strong><br />Coen Breg - <a
@@ -37,6 +41,8 @@
       });
     }
   </script>
+  <script src="/js/install.js"></script>
+  <script src="/js/vibrate.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-const CACHE_NAME = "Offline page"
+const CACHE_NAME = "StaticV1"
 const OFFLINE_URL = "/offline.html"
 const FILES_TO_CACHE = [
   '/offline.html',
@@ -6,11 +6,13 @@ const FILES_TO_CACHE = [
 ];
 
 self.addEventListener("install", (installing) => {
+  self.skipWaiting();
   console.log("Service Worker: I am being installed, hello world!");
-  installing.waitUntil((async () => {
-    const cache = await caches.open(CACHE_NAME);
-    await cache.add(new Request(FILES_TO_CACHE, { cache: 'reload' }));
-  })());
+  installing.waitUntil(
+    caches.open(CACHE_NAME).then(function (cache) {
+      return cache.addAll(FILES_TO_CACHE)
+    })
+  )
 });
 
 self.addEventListener("activate", (activating) => {
