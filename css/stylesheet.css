@@ -13,7 +13,7 @@
 html, body, form						{ padding:0px;margin:0px; }
 
 /* Main elements */
-body													{ background:url("../images/yes.gif") center center no-repeat var(--colors-background-dark);background-size:cover;font-family:var(--fonts-normal-text);font-size:14px;font-weight:400;color:var(--colors-text-light); }
+body													{ background:url(https://media3.giphy.com/media/X2iqesUkZULQs/giphy.gif) center center no-repeat var(--colors-background-dark);background-size:cover;font-family:var(--fonts-normal-text);font-size:14px;font-weight:400;color:var(--colors-text-light); }
 main													{ margin-bottom:10px; }
 main strong										{ display:inline-block;padding:10px;background-color:var(--colors-text-highlight);color:var(--colors-text-light);border-radius:5px; }
 footer												{ font-size:0.85em; }
