@@ -14,23 +14,35 @@
 </head>
 
 <body>
-  <div id="website_container">
-    <div class="content">
-      <header>
-        <h1>Sample Website</h1>
-      </header>
-      <main>
-        <strong>I want to be a PWA when I grow up!</strong>
+  <div class="container">
+    <header>
+      <h1>PWA - Proof of Concept page</h1>
+    </header>
+    <main>
+      <div class="add-to-homepage">
+        <h3>You can add this page to your home screen</h3>
         <button class="add-button">Add to home screen</button>
-
+      </div>
+      <hr>
+      <div class="vibrate">
+        <h3>You can vibrate your device</h3>
         <button class="vibrate-button">Vibrate</button>
-      </main>
-      <footer>
-        <p><strong>Workshop PWA's - Smart Mobile 2020</strong><br />Coen Breg - <a
-            href="mailto:coenbreg@gmail.com">coenbreg@gmail.com</a></p>
-      </footer>
-    </div>
+      </div>
+
+    </main>
+    <footer>
+      <div>
+        <p><strong>Workshop PWA's - Smart Mobile 2020</strong></p>
+      </div>
+      <div>
+        <p>Breg - <a href="mailto:coenbreg@gmail.com">coenbreg@gmail.com</a></p>
+      </div>
+    </footer>
+
   </div>
+
+
+
   <script type="text/javascript">
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

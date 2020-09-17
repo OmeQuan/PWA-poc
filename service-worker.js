@@ -47,9 +47,7 @@ self.addEventListener("push", (pushing) => {
 })
 
 
-//Web Push Notifications//
 self.addEventListener('push', function (event) {
-  // push notification can send event.data.json() as well
   if (event.data) {
     pushdata = JSON.parse(event.data.text())
     console.log('Service Worker: I received this:', pushdata)
@@ -70,7 +68,7 @@ self.addEventListener('push', function (event) {
 })
 
 self.addEventListener('notificationclick', function (clicking) {
-  const pageToOpen = 'https://i399015.hera.fhict.nl/#/'
+  const pageToOpen = 'https://i399015.hera.fhict.nl'
   const promiseChain = clients.openWindow(pageToOpen)
   event.waitUntil(promiseChain)
 })
