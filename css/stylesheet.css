@@ -1,10 +1,6 @@
 /* Variables */
 :root {
-	--colors-background-dark:rgb(15, 15, 15);
-	--colors-background-light:rgb(229, 230, 196);
-	--colors-text-light:rgb(229, 230, 196); 
 	--colors-text-highlight:#456ebf;
-	--colors-text-dark:rgb(229, 230, 196); 
 	--fonts-normal-text:arial,verdana; 
 }
 
@@ -13,19 +9,9 @@
   box-sizing:border-box; 
 }
 
-html, body, form { 
-  max-width: 98vh;
-  margin:auto; 
-}
 
 /* Main elements */
 body	{ 
-  background:var(--colors-background-dark);
-  background-size:cover;
-  font-family:var(--fonts-normal-text);
-  font-size:14px;
-  font-weight:400;
-  color:var(--colors-text-light); 
 }
 
 main {
@@ -41,24 +27,16 @@ footer {
   justify-content: space-between;
 }
 
-h1 {
-  font-size: xx-large;
-}
 
-button {
-    background-color: #456ebf;
-    border-radius: 5px;
-    border: none;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: large;
-}
 hr {
   width: 100vh;
   margin: 2.5em 0em;
   border: 0.5px solid rgb(229, 230, 196);
   opacity: 50%;
   
+}
+
+a {
+  color: aliceblue;
+  opacity: 60%;
 }
