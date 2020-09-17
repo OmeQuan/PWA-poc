@@ -22,17 +22,12 @@ main {
 footer {
   position: absolute;
   bottom: 0;
-  width: 100vh;
-  display: flex;
-  justify-content: space-between;
 }
 
 
 hr {
   width: 100vh;
   margin: 2.5em 0em;
-  border: 0.5px solid rgb(229, 230, 196);
-  opacity: 50%;
   
 }
 

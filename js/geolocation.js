@@ -11,8 +11,8 @@ function geoFindMe() {
     const longitude = position.coords.longitude;
 
     status.textContent = '';
-    mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-    mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+    mapLink.href = ` http://maps.google.co.uk/maps?q=${latitude},${longitude}`;
+    mapLink.textContent = `Open location in maps`;
   }
 
   function error() {
