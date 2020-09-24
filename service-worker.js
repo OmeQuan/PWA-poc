@@ -53,12 +53,21 @@ self.addEventListener('push', function (event) {
     console.log('Service Worker: I received this:', pushdata)
     if (pushdata['title'] != '' && pushdata['message'] != '') {
       const options = {
+        icon: 'images/icons/android-chrome-192x192.png',
         body: pushdata['message'],
-        icon: 'images/favicon-32x32.png',
-        vibrate: [500, 100, 500, 100, 500, 100, 500]
+        vibrate: [500, 10, 500],
+        actions: [
+          {
+            action: 'explore', title: 'Explore this new world',
+            icon: 'images/icons/android-chrome-192x192.png'
+          },
+          {
+            action: 'close', title: 'Close',
+            icon: 'images/icons/android-chrome-192x192.png'
+          },
+        ]
       }
       self.registration.showNotification(pushdata['title'], options)
-      console.log('Service Worker: I made a notification for the user')
     } else {
       console.log(
         "Service Worker: I didn't make a notification for the user, not all the info was there :("
@@ -67,8 +76,17 @@ self.addEventListener('push', function (event) {
   }
 })
 
-self.addEventListener('notificationclick', function (clicking) {
-  const pageToOpen = 'https://i399015.hera.fhict.nl'
-  const promiseChain = clients.openWindow(pageToOpen)
-  event.waitUntil(promiseChain)
-})
+self.addEventListener('notificationclick', function (e) {
+  var notification = e.notification;
+  var action = e.action;
+
+  if (action === 'close') {
+    notification.close();
+  } else {
+    clients.openWindow('https://i399015.hera.fhict.nl');
+    notification.close();
+  }
+});
+
+self.addEventListener('notificationclose', function (e) {
+});
