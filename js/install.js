@@ -1,14 +1,16 @@
 let deferredPrompt;
+const modal = document.querySelector('.add-to-homepage');
 const addBtn = document.querySelector('.add-button');
-addBtn.style.display = 'none';
+const cancelBtn = document.querySelector('.cancel-button');
+modal.style.display = 'none';
 
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
-  addBtn.style.display = 'block';
+  modal.style.display = 'block';
 
   addBtn.addEventListener('click', (e) => {
-    addBtn.style.display = 'none';
+    modal.style.display = 'none';
     deferredPrompt.prompt();
     deferredPrompt.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === 'accepted') {
@@ -18,5 +20,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
       }
       deferredPrompt = null;
     });
+
   });
+  cancelBtn.addEventListener('click', (e) => {
+    modal.style.display = 'none'
+  })
 });

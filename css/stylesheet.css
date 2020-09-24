@@ -36,3 +36,13 @@ a {
   color: aliceblue;
   opacity: 60%;
 }
+
+.add-to-homepage {
+  padding: 2em;
+  color: black;
+  border-radius: 8px;
+  background-color: aliceblue;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}

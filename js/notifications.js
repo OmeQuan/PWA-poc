@@ -1,8 +1,16 @@
+const enabled = document.querySelector('.notifications-enabled');
+const disabled = document.querySelector('.notifications-disabled');
+enabled.style.display = 'none';
+
 //Asking for permission with the Notification API
 if (typeof Notification !== typeof undefined) { //First check if the API is available in the browser
   Notification.requestPermission().then(function (result) {
+
     //If accepted, then save subscriberinfo in database
     if (result === "granted") {
+
+      enabled.style.display = 'block';
+      disabled.style.display = 'none';
       console.log("Browser: User accepted receiving notifications, save as subscriber data!");
       navigator.serviceWorker.ready.then(function (serviceworker) { //When the Service Worker is ready, generate the subscription with our Serice Worker's pushManager and save it to our list
         const VAPIDPublicKey = "BGq-IJAuazT0XR2m1aa4dmbwtyqEfTmYBqkckhlkDEunl2JwYMo_oJkqRlePvOoY3UJLVYJPBz6tHZA8pb188tc"; // Fill in your VAPID publicKey here

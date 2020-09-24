@@ -22,8 +22,12 @@
     </header>
     <main>
       <div class="add-to-homepage">
-        <h4>You can add this page to your home screen</h4>
-        <button class="add-button btn btn-secondary">Add to home screen</button>
+        <h5>Add this page to your home screen</h5>
+        <div class="d-flex justify-content-around mt-4">
+          <button class="add-button btn btn-primary ">Add page</button>
+          <button class="cancel-button btn btn-secondary">Cancel</button>
+        </div>
+
       </div>
       <hr>
       <div class="vibrate">
@@ -34,6 +38,15 @@
       <div class="vibrate">
         <h4>You can receive notifications</h4>
         <p>Receive notifications when enabled</p>
+        <div class="d-flex">Notification status: <div class="notifications-enabled" style="color: aliceblue;">
+            <img src="/images/feather/check.svg" alt="">
+
+          </div>
+          <div class="notifications-disabled">
+            <img src="/images/feather/x.svg" alt="">
+          </div>
+        </div>
+
       </div>
       <hr>
       <div class="geolocation">
