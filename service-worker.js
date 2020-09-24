@@ -59,7 +59,7 @@ self.addEventListener('push', function (event) {
         actions: [
           {
             action: 'explore', title: 'Explore this new world',
-            icon: 'images/icons/android-chrome-192x192.png'
+            icon: 'images/feather/android-chrome-192x192.png'
           },
           {
             action: 'close', title: 'Close',
