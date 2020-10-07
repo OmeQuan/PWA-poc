@@ -2,7 +2,9 @@ const CACHE_NAME = "StaticV1"
 const OFFLINE_URL = "/offline.html"
 const FILES_TO_CACHE = [
   '/offline.html',
-  '/css/stylesheet.css'
+  '/css/stylesheet.css',
+  '/css/offline.css',
+  '/js/offline.js'
 ];
 
 self.addEventListener("install", (installing) => {
