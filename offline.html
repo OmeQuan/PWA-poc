@@ -9,20 +9,22 @@
   <meta name="description" content="Sample site as resource to build your first PWA">
   <meta name="keywords" content="pwa,workshop,fontys,smart mobile">
   <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+  <link rel="stylesheet" href="css/offline.css" type="text/css">
   <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
   <div id="website_container">
     <div class="content">
-      <header>
-        <h1>Offline page</h1>
-      </header>
-      <main>
-        <strong>I can't get any internet</strong>
-      </main>
+      <h1>I can't connect to the internet</h1><br>
+      <h2>Play a game of Minesweeper instead</h2>
+      <table id=grid>
+      </table>
+      <BUTTON onclick="generateGrid();">Reset Grid</BUTTON>
     </div>
   </div>
 </body>
+
+<script src="/js/offline.js"></script>
 
 </html>

@@ -1,10 +1,6 @@
 /* Variables */
 :root {
-	--colors-background-dark:rgb(46, 0, 59);
-	--colors-background-light:#ffff;
-	--colors-text-light:#fff; 
 	--colors-text-highlight:#456ebf;
-	--colors-text-dark:rgb(229, 230, 196); 
 	--fonts-normal-text:arial,verdana; 
 }
 
@@ -13,89 +9,40 @@
   box-sizing:border-box; 
 }
 
-html, body, form { 
-  padding:0px;
-  margin:0px; 
-}
 
 /* Main elements */
 body	{ 
-  background:url(https://media3.giphy.com/media/X2iqesUkZULQs/giphy.gif) center center no-repeat var(--colors-background-dark);
-  background-size:cover;
-  font-family:var(--fonts-normal-text);
-  font-size:14px;
-  font-weight:400;
-  color:var(--colors-text-light); 
 }
 
-main { 
-  margin-bottom:10px; 
-}
-
-main strong { 
+main {
   display: flex;
-  padding:10px;
-  background-color:var(--colors-text-highlight);
-  color:var(--colors-text-light);
-  border-radius:5px; 
-  justify-content:center;
-  align-items:center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.content {
-  width: 70vh;
+footer {
+  position: absolute;
+  bottom: 0;
 }
 
-button {
-  margin: 10px;
-  background-color: #456ebf;
-  border-radius: 5px;
-  border: none;
-  padding: 0.5rem 1rem;
-  text-decoration: none;  
-  color: #ffffff;
-  cursor: pointer;
-  font-size: large;
+
+hr {
+  width: 100vh;
+  margin: 2.5em 0em;
+  
 }
 
-footer { 
-  font-size:0.85em; 
-}
-h1 { 
-  font-size:1.5em;
-  margin:0px 0px 15px 0px; 
+a {
+  color: aliceblue;
+  opacity: 60%;
 }
 
-p { 
-  margin:0px 0px 15px 0px; 
-}
-
-p a	{ 
-  color:var(--colors-text-highlight);
-  text-decoration:none; 
-}
-p a:hover { 
-  text-decoration:underline; 
-}
-p:last-child { 
-  margin:0px; 
-}
-
-/* Other elements */
-#website_container { 
-  width:751px;
-  height:100vh;
-  text-align:center;
-  margin:0px auto;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  overflow:hidden; 
-}
-#website_container .content { 
-  border-radius:15px;
-  background-color:var(--colors-background-dark);
-  color:var(--colors-text-dark);
-  padding:15px;
-  overflow:hidden; 
+.add-to-homepage {
+  padding: 2em;
+  color: black;
+  border-radius: 8px;
+  background-color: aliceblue;
+  position: absolute;
+  top: 1em;
+  right: 1em;
 }

@@ -9,28 +9,68 @@
   <meta name="description" content="Sample site as resource to build your first PWA">
   <meta name="keywords" content="pwa,workshop,fontys,smart mobile">
   <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" type="image/png" href="images/icons/android-chrome-512x512.png">
 </head>
 
-<body>
-  <div id="website_container">
-    <div class="content">
-      <header>
-        <h1>Sample Website</h1>
-      </header>
-      <main>
-        <strong>I want to be a PWA when I grow up!</strong>
-        <button class="add-button">Add to home screen</button>
+<body class="bg-dark text-light">
+  <div class="container-xl">
+    <header>
+      <h1>PWA - Proof of Concept page</h1>
+    </header>
+    <main>
+      <div class="add-to-homepage">
+        <h5>Add this page to your home screen</h5>
+        <div class="d-flex justify-content-around mt-4">
+          <button class="add-button btn btn-primary ">Add page</button>
+          <button class="cancel-button btn btn-secondary">Cancel</button>
+        </div>
 
-        <button class="vibrate-button">Vibrate</button>
-      </main>
-      <footer>
-        <p><strong>Workshop PWA's - Smart Mobile 2020</strong><br />Coen Breg - <a
-            href="mailto:coenbreg@gmail.com">coenbreg@gmail.com</a></p>
-      </footer>
-    </div>
+      </div>
+      <hr>
+      <div class="vibrate">
+        <h4>You can vibrate your device</h4>
+        <button class="vibrate-button btn btn-secondary">Vibrate</button>
+      </div>
+      <hr>
+      <div class="vibrate">
+        <h4>You can receive notifications</h4>
+        <p>Receive notifications when enabled</p>
+        <div class="d-flex">Notification status: <div class="notifications-enabled" style="color: aliceblue;">
+            <img src="/images/feather/check.svg" alt="">
+
+          </div>
+          <div class="notifications-disabled">
+            <img src="/images/feather/x.svg" alt="">
+          </div>
+        </div>
+
+      </div>
+      <hr>
+      <div class="geolocation">
+        <h4>You can get someones location</h4>
+        <button class="btn btn-secondary" id="find-me">Show my location</button><br />
+        <p id="status"></p>
+        <a id="map-link" target="_blank"></a>
+      </div>
+    </main>
+
+    <footer class="d-flex justify-content-center">
+      <div>
+        <p><strong>Workshop PWA's - Smart Mobile 2020</strong></p>
+      </div>
+      <div class="mr-5"> </div>
+      <div>
+        <p>Coen Breg - <a href="mailto:coenbreg@gmail.com">Coenbreg@gmail.com</a></p>
+      </div>
+    </footer>
+
   </div>
+
+
+
   <script type="text/javascript">
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -43,6 +83,19 @@
   </script>
   <script src="/js/install.js"></script>
   <script src="/js/vibrate.js"></script>
+  <script src="/js/notifications.js"></script>
+  <script src="/js/geolocation.js"></script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
